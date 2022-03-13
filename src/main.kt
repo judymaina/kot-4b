@@ -1,17 +1,90 @@
 fun main(){
-    var school=("Codehive")
-    var char5=school[4]
-    var char6=school[5]
-    var char7=school[6]
-   var  char8=school[7]
-    var result="$char5$char6$char7$char8"
-    println(result)
-fun letter=make("Judy",19)
-    var string="Wanjiru"
-println("The length of my name is" +string.length)
+    numerics(arrayOf(5,6,7,8,4,2))
+    mixed(arrayOf(3.0,5.2,"Judy",1.4))
+var m=letters(arrayOf('a','b','e','x','l','o','v','u'))
+    println(m)
+}
+
+
+fun numerics(nums:Array<Int>):Int {
+    var numbers = 2
+    nums.forEach { number ->
+        numbers *= number
+        println(numbers)
+    }
+    return numbers
+    }
+fun mixed(combine:Array<Any>):Float{
+    var mix=1.1F
+    combine.forEach { combined ->
+        if (combined is Float || combined is Double)
+            mix += combined.toString().toFloat()
+        println(mix)
+    }
+    return mix
+
+    }
+
+fun letters(symbol:Array<Char>):Int{
+    var vow = 0
+    symbol.forEach { vowels ->
+        if (vowels == 'a' || vowels == 'e' || vowels == 'i' || vowels == 'o' || vowels == 'u') {
+            vow++
+        }
+    }
+    return vow
+
 
 }
-fun make(name:String,age:Int):String{
-    var cat=("Hi my name is$name and i $age years old")
-return cat
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
